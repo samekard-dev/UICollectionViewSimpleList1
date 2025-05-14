@@ -13,7 +13,6 @@
 		863103BF2ABC06A800030B35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 863103BD2ABC06A800030B35 /* Main.storyboard */; };
 		863103C12ABC06A900030B35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 863103C02ABC06A900030B35 /* Assets.xcassets */; };
 		863103C42ABC06A900030B35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 863103C22ABC06A900030B35 /* LaunchScreen.storyboard */; };
-		863103CC2ABC06C300030B35 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863103CB2ABC06C300030B35 /* ListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +24,6 @@
 		863103C02ABC06A900030B35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		863103C32ABC06A900030B35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		863103C52ABC06A900030B35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		863103CB2ABC06C300030B35 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +63,6 @@
 				863103C02ABC06A900030B35 /* Assets.xcassets */,
 				863103C22ABC06A900030B35 /* LaunchScreen.storyboard */,
 				863103C52ABC06A900030B35 /* Info.plist */,
-				863103CB2ABC06C300030B35 /* ListCell.swift */,
 			);
 			path = UICollectionViewSimpleList1;
 			sourceTree = "<group>";
@@ -142,7 +139,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				863103BC2ABC06A800030B35 /* ViewController.swift in Sources */,
-				863103CC2ABC06C300030B35 /* ListCell.swift in Sources */,
 				863103B82ABC06A800030B35 /* AppDelegate.swift in Sources */,
 				863103BA2ABC06A800030B35 /* SceneDelegate.swift in Sources */,
 			);

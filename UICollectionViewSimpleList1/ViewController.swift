@@ -27,22 +27,8 @@ class ViewController: UIViewController {
 
 extension ViewController {
     func createLayout() -> UICollectionViewLayout {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                              heightDimension: .fractionalHeight(1.0))
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .absolute(44))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-        
-        let section = NSCollectionLayoutSection(group: group)
-        section.interGroupSpacing = 0
-        
-        section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
-        
-        let layout = UICollectionViewCompositionalLayout(section: section)
-        
-        return layout
+        let config = UICollectionLayoutListConfiguration(appearance: .plain)
+        return UICollectionViewCompositionalLayout.list(using: config)
     }
 }
 
@@ -57,8 +43,12 @@ extension ViewController {
     func configureDataSource() {
         
         //【C】リサイクル機能
-        let cellRegistration = UICollectionView.CellRegistration<ListCell, String> { (cell, indexPath, identifier) in
-            cell.label.text = identifier
+        let cellRegistration = UICollectionView.CellRegistration
+        <UICollectionViewListCell, String> {
+            (cell, indexPath, identifier) in
+            var content = cell.defaultContentConfiguration()
+            content.text = identifier
+            cell.contentConfiguration = content
         }
         
         //データソースの作成
