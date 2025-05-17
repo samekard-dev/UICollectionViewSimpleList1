@@ -43,8 +43,7 @@ extension ViewController {
     func configureDataSource() {
         
         //【C】リサイクル機能
-        let cellRegistration = UICollectionView.CellRegistration
-        <UICollectionViewListCell, String> {
+        let cellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, String> {
             (cell, indexPath, identifier) in
             var content = cell.defaultContentConfiguration()
             content.text = identifier
@@ -52,8 +51,7 @@ extension ViewController {
         }
         
         //データソースの作成
-        dataSource = UICollectionViewDiffableDataSource<Section, String> (collectionView: collectionView) 
-        {
+        dataSource = UICollectionViewDiffableDataSource<Section, String> (collectionView: collectionView) {
             //【B】セルの内容が決定
             (collectionView: UICollectionView, indexPath: IndexPath, identifier: String) -> UICollectionViewCell? in
             return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: identifier)
